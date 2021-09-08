@@ -1,0 +1,38 @@
+.userDetails
+{
+    width: 60%;
+    margin: auto;
+    margin-top: 10%;
+    box-shadow: 2px 2px 2px 2px lightgray;
+    border-radius: 60px;
+}
+
+.toCenter
+{
+    text-align: center;
+    width: 100%;
+}
+
+.network
+{
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+
+.account
+{
+    padding-bottom: 1%;
+}
+
+@media(max-width:900px)
+{
+    .userDetails
+    {
+        width: 80%;
+    }
+}
+
+h1,p,h2,h3
+{
+    font-family: 'Kaisei HarunoUmi', serif;
+}
