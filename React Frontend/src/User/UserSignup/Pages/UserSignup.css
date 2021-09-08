@@ -1,0 +1,60 @@
+
+
+.center
+{
+    margin-top: 5%;
+    text-align: center;
+}
+.center1
+{  
+    text-align: center;
+}
+.vote
+{
+    background-color: #34495E;
+    display: inline-block;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+.myVote
+{
+    padding: 20px 100px 0 100px;
+    font-family: 'Kaisei HarunoUmi', serif;
+    font-weight: bold;
+    color: white;
+}
+
+.admin
+{
+    padding: 0px 194px 0 194px;
+    font-family: 'Kaisei HarunoUmi', serif;
+    color: white;
+}
+
+.Login
+{
+    text-decoration: none;
+    border: none;
+    color: white;
+    background-color: #3498DB;
+    padding: 5px 68px 5px 68px;
+    border-radius: 6px;
+}
+.subDiv
+{
+    background-color: #DDD;
+    display: inline-block;
+    padding: 0px 30px 0 30px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.pass
+{
+    text-decoration: none;
+}
+
+.anchor
+{
+    text-decoration: none;
+    margin-left: 1%;
+}
