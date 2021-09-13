@@ -18,6 +18,9 @@ const path = require('path');
 //Importing Signin Route
 const UserSignin = require('./Routes/UserSignin/UserSignin');
 
+const Candidate =  require('./Routes/BlockChainData/CandidatesData/CandidatesData');
+
+const getCandidates = require('./Routes/BlockChainData/GetCandidates/GetCandidates');
 //Importing Body-Parser
 app.use(express.json());
 
@@ -34,6 +37,11 @@ app.use(UserSignin);
 
 //Voting Route
 app.use(Voting);
+
+//CanidiateData Route
+app.use(Candidate)
+
+app.use(getCandidates);
 
 //Use for production Build
 if(process.env.NODE_ENV === 'production')
