@@ -1,45 +1,49 @@
 //Importing React
 import React from 'react';
 
-//Importing Aux Functional Component
-import Aux from '../../HOC/Auxiliary';
+//Importing NavLink
+import { NavLink } from 'react-router-dom';
 
-//Importing MainNav Functional Component
-import MainNav from '../../Ui/Navigation/MainNav/MainNav';
+//Importing Aux Component
+import Aux from '../../../../HOC/Auxiliary';
 
-//Importing classes from Register.css File
-import classes from './Register.css';
+//Importing HomeNav Component
+import HomeNav from '../../../../Ui/Navigation/HomeNav';
 
-//Creating Register Functional Component
-const Register = props =>{
-    
+//Importing classes from Admin.css
+import classes from './Admin.css';
+
+//Creating Admin Component
+const Admin = props =>{
+
     //Returning JSX
     return(
         <Aux>
-            <MainNav />
+            <HomeNav />
             <div className={classes.center}>
                 <div className={classes.vote}>
                     <h1 className={classes.myVote}>E-Voting</h1>
-                    <p className={classes.admin}>Voting Registration</p>
+                    <p className={classes.admin}>Administrator Login</p>
                     <hr />
                     <br />
                     <form method="POST">
                         <input 
-                            value={props.user.idCard}
+                            value={props.user.email}
                             onChange={props.handleInput}
-                            type="string" 
-                            placeholder="Id-Card Number" 
-                            name="idCard"
+                            type="email" 
+                            placeholder="Email" 
+                            name="email"
                         />
 
                         <br />
                         <br />
 
                         <input
-                            value={props.user.account} 
+                            value={props.user.password} 
                             onChange={props.handleInput}
-                            type="string" 
-                            name="account"
+                            type="password" 
+                            placeholder="Password" 
+                            name="password"
                         />
                     </form>
                     <br />
@@ -56,14 +60,20 @@ const Register = props =>{
                 </div>
                 <div className={classes.center1}>
                     <div className={classes.subDiv}>
-                        <p>One Time Registration for every Election</p>
+                        <br />
+                        <NavLink to="/adminSignup" className={classes.pass}>
+                            Administrator Signup?
+                        </NavLink>
+                        <p>If you have a problem logging in,<NavLink to="/">click here</NavLink> to email us</p>
                     </div>
                 </div>
+                
                 <br />
+                
             </div>
         </Aux>
     )
 }
 
-//Exporting Register Functional Component
-export default Register;
+//Exporting Admin Functional Component
+export default Admin;

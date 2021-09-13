@@ -5,7 +5,7 @@ import React from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
 //Importing AdminComponent Functional Component
-import AdminComponent from '../Admin/Components/AdminComponent';
+import AdminComponent from '../Admin/Admin/AdminLogin/Components/AdminComponent';
 
 //Importing Aux Functional Component
 import Aux from '../HOC/Auxiliary';
@@ -24,6 +24,12 @@ import Home from '../Home/Pages/Home';
 
 //Importing LoadBlockChainData Functional Component
 import LoadBlockChainData from '../BlockChain/LoadBlockChain/LoadBlockChain';
+
+//Importing AddCandidate Functional Component
+import AddCandidateComponent from '../Admin/Candidate/Components/AddCandidateComponent';
+
+
+import HomeComponent from '../Admin/Home/Components/HomeComponent';
 
 //Creating App Functional Component
 const App = () => {
@@ -56,7 +62,19 @@ const App = () => {
           <Route path = "/userSignup" exact>
             <UserSignupComponent />
           </Route>
+
+          <Route path = "/adminHome" exact>
+            <HomeComponent />
+          </Route>
+
+          <Route path = "/addCandidate" exact>
+            <AddCandidateComponent />
+          </Route>
           
+          <Route path = "/adminSignup" exact>
+            <AddCandidateComponent />
+          </Route>
+
           <Redirect to="/" />
         </Switch>
       </BrowserRouter>

@@ -1,23 +1,21 @@
-//Importing React and useState
+//Importing React and UseState
 import React, {useState} from 'react';
 
-//Importing Aux Functional Component
-import Aux from '../../HOC/Auxiliary';
+//Importing Admin Functional Component
+import Admin from '../Pages/Admin';
 
-//Importing Register Functional Component
-import Register from '../Pages/Register';
+//Creating AdminComponent Functional Component
+const AdminComponent = () =>{
 
-//Creating RegisterComponent
-const RegisterComponent = props =>{
-
-    //Creating useState
+    //Creating User useState
     const [user,setUser] = useState({
 
         //Initialzing email equal to Empty String
-        idCard:"",
+        email:"",
 
         //Initialzing password equal to Empty String
-        account:""
+        password:""
+
     });
 
     //Creating Variable named name and value
@@ -45,11 +43,11 @@ const RegisterComponent = props =>{
         //Cancelling default Events
         event.preventDefault();
 
-        //Initializing user state value to email and passowrd
-        const {idCard, account} = user;
+        //Initializing user state value to email and password
+        const {email, password} = user;
 
         //Sending Request to Node.js using Fetch API
-        await fetch("/voting", {
+        await fetch("/signup", {
 
             //Setting Method
             method:"POST",
@@ -61,21 +59,19 @@ const RegisterComponent = props =>{
                 "Content-Type" : "application/json"
             },
 
+
             //Stringifying the email and password and storing it into body
             body:JSON.stringify({
-                idCard, account
+                email, password
             })
         });
     }
 
     //Returning JSX
     return(
-        <Aux>
-            <Register handleInput={handleInput} PostData={PostData} account={props.account} user={user}/>
-        </Aux>
-        
+        <Admin user={user} handleInput={handleInput} PostData={PostData}/>
     )
 }
 
-// Exporting RegisterComponent Functional Component
-export default RegisterComponent;
+//Exporting AdminComponent Functional Component
+export default AdminComponent;

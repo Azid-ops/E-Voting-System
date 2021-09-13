@@ -1,9 +1,6 @@
 //Importing React
 import React from 'react';
 
-//Importing Link
-import { Link } from 'react-router-dom';
-
 //Importing Aux Functional Component
 import Aux from '../../HOC/Auxiliary';
 
@@ -23,9 +20,6 @@ const HomeNav = () =>{
     return(
         <Aux>
             <header className={classes.Toolbar}>
-                <Link to="/" className={classes.brand}>
-                    <div>E-Voting</div>
-                </Link>
                 <Logo />
                 <nav>
                     <NavigationItems /> 

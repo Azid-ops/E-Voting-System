@@ -1,0 +1,54 @@
+.preview
+{
+    margin-top: 10%;
+}
+.data
+{
+    margin-top: 5%;
+    display: inline-block;
+    width: 30%;
+}
+
+.myList
+{
+    list-style: none;
+}
+
+.candi
+{
+    margin-top: 2%;
+    display: inline-block;
+    width: 60%;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 2px 2px 2px 2px #ccc;
+}
+
+.mainDiv
+{
+    text-align: center;
+}
+
+.profile
+{
+    border-radius: 50px;
+    width: 30%;
+    height: 100px;
+    display: inline-block;
+}
+p
+{
+    font-family: 'Kaisei HarunoUmi', serif;
+
+}
+
+.Election
+{
+    font-family: 'Kaisei HarunoUmi', serif;
+    margin-bottom: 5%;
+    background-color: green;
+    border: none;
+    color: whitesmoke;
+    padding: 10px;
+    cursor:pointer;
+}
