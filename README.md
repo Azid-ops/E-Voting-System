@@ -33,21 +33,7 @@ After this again do Step 4
 ### Step 6:
 Now go to Config Folder and in `webpack.config.js` file and replace this code
 
-loader: require.resolve('css-loader'),
-
-options: 
-
-{
-        
-   importLoaders:1,
-          
-   modules:{
-          
-       localIdentName:"[name]__[local]__[hash:base64:5]"
-            
-   }
-          
-}
+`loader: require.resolve('css-loader'),options: {importLoaders:1,modules:{localIdentName:"[name]__[local]__[hash:base64:5]"}}`
      
 on line 112(css-loader)
 
